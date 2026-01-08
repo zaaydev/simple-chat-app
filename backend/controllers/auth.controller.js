@@ -56,7 +56,7 @@ export const handleSignUp = async (req, res) => {
       res.cookie("jwt_cookie", token, {
         maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
         httpOnly: true, // prevent access via JS
-        sameSite: true, // protection against CSRF
+        sameSite: "none", // protection against CSRF
         secure: process.env.SERVER_ENV !== "development", // secure in production
       });
 
