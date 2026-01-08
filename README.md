@@ -7,7 +7,6 @@ Authentication is handled using **JWT (session-style via cookies)** and messagin
 
 ## 📸 Screenshots
 
-![Chat Page UI](./frontend/public/screenshots/1..jpg)
 ![Chat Page UI](./frontend/public/screenshots/2..jpg)
 
 ---
