@@ -85,7 +85,7 @@ Along the way, I learned:
 - `CLOUDINARY_SECRET_KEY=your_secret_key`
 
 - Start backend server:
-  - `npm run dev`
+  - `npm run dev` or `npm start`
 
 ### 3️⃣ Setup Frontend
 - `cd frontend`
