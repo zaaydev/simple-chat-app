@@ -145,6 +145,8 @@ const useAuthStore = create((set, get) => ({
 
     // 🧠 Create socket with user ID as query
     const socket = io(BACKEND_URL, {
+      withCredentials: true, // works on production with this
+      transports: ["websocket"],
       query: {
         clientId: userAuth?._id,
       },
@@ -162,7 +164,8 @@ const useAuthStore = create((set, get) => ({
 
   disconnectToSocket: () => {
     // 🛑 Avoid calling disconnect on dead socket
-    if (!get().socket.connected) return;
+    const socket = get().socket;
+    if (!socket || !socket.connected) return;
 
     // 🔌 Close socket connection
     get().socket.disconnect();
