@@ -55,7 +55,8 @@ Along the way, I learned:
 - 🗂️ **Zustand**
   - Lightweight global state management
 - 📤 **Frontend → Backend communication**
-  - Sending files using `multipart/form-data`
+  - Sending files using `multipart/form-data` 
+  - base64 for images is not efficient because of larger payload
 - ☁️ **Efficient file uploads**
   - Buffer → Readable Stream
   - Streaming uploads to Cloudinary using `pipe()` for better performance
